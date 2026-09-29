@@ -46,3 +46,23 @@ python watch.py --token <MINT_ADDRESS> --baseline 0.00001234
 ## License
 
 MIT
+
+## Multi-token monitoring
+
+Monitor several tokens at once with `watch_multi.py`:
+
+```bash
+cp tokens.example.json tokens.json   # fill in your own token mints + baselines
+python watch_multi.py --config tokens.json
+python watch_multi.py --config tokens.json --interval 300 --once
+```
+
+Each entry in the config has its own baseline price and alert levels:
+
+```json
+[
+  {"token": "<MINT>", "label": "mytoken", "baseline": 0.00001234, "alerts": [2.0, 3.0]}
+]
+```
+
+Note: `tokens.json` is your private config — never commit it. Only `tokens.example.json` (the template) belongs in the repo.
