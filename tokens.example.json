@@ -1,0 +1,14 @@
+[
+  {
+    "token": "PASTE_TOKEN_MINT_ADDRESS_HERE",
+    "label": "mytoken",
+    "baseline": 0.00001234,
+    "alerts": [2.0, 3.0]
+  },
+  {
+    "token": "PASTE_ANOTHER_MINT_ADDRESS_HERE",
+    "label": "anothertoken",
+    "baseline": 0.0005,
+    "alerts": [2.0, 5.0]
+  }
+]
